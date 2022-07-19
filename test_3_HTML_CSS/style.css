@@ -1,0 +1,46 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.container-top {
+  height: 30%;
+  display: flex;
+}
+
+.left-top {
+  width: 30%;
+  background-color: #573f2e;
+}
+
+.right-top {
+  width: 70%;
+  background-color: #3e2d21;
+}
+
+.container-bottom {
+  height: 70%;
+  display: flex;
+}
+
+.left-bottom {
+  width: 30%;
+  background-color: #faeded;
+}
+
+.right-bottom {
+  width: 70%;
+}
+
+.right-bottom-top {
+  height: 70%;
+  background-color: #6a4021;
+}
+
+.right-bottom-bottom {
+  height: 30%;
+  background-color: #3e2d21;
+}
