@@ -38,35 +38,35 @@ class IndexController extends Controller
     public function store(Request $request)
     {
         $reservation = new Reservation;
-        $reservation -> topic = $request -> topic;
-        $reservation -> content = $request -> content;
-        $reservation -> metting = $request -> metting;
-        $reservation -> user_id = Auth::id();
+        $reservation->topic = $request->topic;
+        $reservation->content = $request->content;
+        $reservation->metting = $request->metting;
+        $reservation->user_id = Auth::id();
 
-        $reservation -> save();
-        return redirect() -> route('reservations.index');
+        $reservation->save();
+        return redirect()->route('reservations.index');
     }
 
     public function edit($id)
     {
         $reservation = Reservation::find($id);
-        return view('reservations.edit', ['reservation'=>$reservation]);
+        return view('reservations.edit', ['reservation' => $reservation]);
     }
 
     public function update(Request $request, $id)
     {
         $reservation = Reservation::find($id);
-        $reservation -> topic = $request -> topic;
-        $reservation -> content = $request -> content;
-        $reservation -> metting = $request -> metting;
-        $reservation -> save();
-        return redirect() -> route('reservations.index');
+        $reservation->topic = $request->topic;
+        $reservation->content = $request->content;
+        $reservation->metting = $request->metting;
+        $reservation->save();
+        return redirect()->route('reservations.index');
     }
 
     public function destroy($id)
     {
         $reservation = Reservation::find($id);
-        $reservation -> delete();
-        return redirect() -> route('reservations.index');
+        $reservation->delete();
+        return redirect()->route('reservations.index');
     }
 }

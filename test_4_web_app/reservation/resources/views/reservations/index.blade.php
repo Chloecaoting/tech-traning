@@ -11,12 +11,12 @@
                 <div class="card-body">
                     <h5 class="card-title">Topic: {{ $reservation -> topic }}</h5>
                     <p class="card-text">
-                    Content: {{ $reservation -> content }}
+                        Content: {{ $reservation -> content }}
                     </p>
                     <p class="card-text">予約者: Tomさん</p>
                     <div style="text-align: center;">
                         <a href="{{ route('reservations.edit', $reservation->id)}}" class="btn btn-primary " style="display: inline-block;">編集</a>
-                        <form action="{{ route('reservations.destroy', $reservation->id)}}" method='POST'  style="display: inline-block; padding-left: 20px;">
+                        <form action="{{ route('reservations.destroy', $reservation->id)}}" method='POST' style="display: inline-block; padding-left: 20px;">
                             @csrf
                             @method('delete')
                             <button class="btn btn-primary" type="submit" onclick="return confirm('削除しますか？')">削除</button>
@@ -31,9 +31,9 @@
         </div>
         <div class="col-md-2">
             @if (Route::has('reservations.create'))
-                <a class="btn btn-primary" href="{{ route('reservations.create') }}">
-                    {{ __('新規予約') }}
-                </a>
+            <a class="btn btn-primary" href="{{ route('reservations.create') }}">
+                {{ __('新規予約') }}
+            </a>
             @endif
         </div>
     </div>
