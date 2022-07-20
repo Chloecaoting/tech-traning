@@ -1,0 +1,34 @@
+body {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-color: grey;
+}
+
+.header {
+  top: 0;
+  height: 50px;
+  background-color: #424242;
+  flex: auto;
+}
+
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+a.link {
+  display: inline-block;
+  background-color: #f44336;
+  color: #ffffff;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 20px;
+  opacity: 0.9;
+}
+
+a.link:hover {
+  color: hotpink;
+}
